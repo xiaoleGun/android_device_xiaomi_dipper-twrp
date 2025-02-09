@@ -23,7 +23,7 @@
 # Sort out keymaster version issues
 #
 
-source /system/bin/sdm845tools.sh
+source /system/bin/dippertools.sh
 
 # try to retrieve the ROM's keymaster services version information
 get_ROM_keymaster_version() {

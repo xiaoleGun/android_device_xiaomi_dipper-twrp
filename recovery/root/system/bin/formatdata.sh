@@ -19,14 +19,14 @@
 #	The GNU General Public License: see <http://www.gnu.org/licenses/>
 #
 
-source /system/bin/sdm845tools.sh
+source /system/bin/dippertools.sh
 
 # format the metadata partition using alternative methods
 format_metadata() {
 	local dyn=$(rom_has_dynamic_partitions);
 	[ "$dyn" != "1" ] && return;
 
-	local SUPPORTED_DEVICE="dipper,polaris"; # the supported device(s)
+	local SUPPORTED_DEVICE="dipper"; # the supported device(s)
 	local META=/metadata;
 	local block_base="/dev/block/bootdevice/by-name";
 	local realmeta=$block_base"$META"; # real /metadata

@@ -1,25 +1,42 @@
-# Common 12.1 device tree for Xiaomi sdm845 devices (codenamed _dipper/polaris_)
+# Device tree for Xiaomi Mi 8 (codenamed _"dipper"_)
 
-## Suitable for:
-* Xiaomi Mi 8 (_dipper_)
-* Xiaomi Mi Mix 2S (_polaris_)
+==================================
 
-## May possibly be amended for:
-* POCO F1 (_beryllium_)
-* Xiaomi Mi 8 Pro (_equuleus_)
-* Xiaomi Mi 8 Explorer Edition (_ursa_)
-* Xiaomi Mi Mix 3 (_perseus_)
+## Device specifications
 
-## Examples:
-See the "fox_12.1" branches in the _dipper_ and _polaris_ device trees
+Basic   | Spec Sheet
+-------:|:-------------------------
+SoC     | Qualcomm SDM845 Snapdragon 845
+CPU     | Octa-core (4x2.8 GHz Kryo 385 Gold & 4x1.8 GHz Kryo 385 Silver)
+GPU     | Adreno 630
+Memory  | 6 GB RAM
+Shipped Android Version | 8.1 with MIUI 9.5
+Storage | 64/128/256 GB
+Battery | Non-removable Li-Ion 3400 mAh battery
+Display | 1080 x 2248 pixels, 18:9 ratio, 6.21 inches, Super AMOLED (~402 ppi density)
+Camera  | Dual 12 MP, 4-axis OIS, 2x optical zoom, dual PDAF, dual-LED (dual tone) flash
 
----
-## Copyright notice
+## Device picture
+
+![Xiaomi Mi 8](https://xiaomi-mi.com/uploads/CatalogueImage/01_b_16982_1527780977.jpg "Xiaomi Mi 8 in black")
+
+## Building
+Generally, see https://wiki.orangefox.tech/en/dev/building
+
+### Variants
+1. For standard mode, build without any additional flags.
+2. To build for ROMs using retrofitted dynamic partitions, run "export FOX_USE_DYNAMIC_PARTITIONS=1" before building.
+3. To build for ROMs using borrowed keymaster 4.0, run "export FOX_USE_KEYMASTER_4=1" before building.
+
+### Kernel source
+Clone this: "https://github.com/LineageOS/android_kernel_xiaomi_sdm845.git -b lineage-21"
+
+## Copyright
  ```
   /*
-  *  Copyright (C) 2020-2022 The OrangeFox Recovery Project
+  *  Copyright (C) 2018 The LineageOS Project
   *
-  *  Copyright (C) 2020-2022 TeamWin Recovery Project
+  *  Copyright (C) 2019-2024 The OrangeFox Recovery Project
   *
   * This program is free software: you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by

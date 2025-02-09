@@ -22,7 +22,7 @@
 # Deal with situations where recovery is built for dynamic ROMs, but the current ROM is non-dynamic
 #
 
-source /system/bin/sdm845tools.sh
+source /system/bin/dippertools.sh
 
 # change the dynamic build into non-dynamic, on the fly, as far as is possible
 morph_into_non_dynamic() {
